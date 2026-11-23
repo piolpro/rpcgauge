@@ -1,0 +1,8 @@
+# Public Ethereum mainnet endpoints (no API key).
+https://ethereum-rpc.publicnode.com publicnode
+https://eth.drpc.org drpc
+https://1rpc.io/eth 1rpc
+https://rpc.flashbots.net flashbots
+https://rpc.mevblocker.io mevblocker
+https://eth-mainnet.public.blastapi.io blastapi
+https://eth.merkle.io merkle

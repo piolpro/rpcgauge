@@ -1,0 +1,5 @@
+# Public Arbitrum One endpoints (no API key).
+https://arb1.arbitrum.io/rpc arbitrum.io
+https://arbitrum-one-rpc.publicnode.com publicnode
+https://arbitrum.drpc.org drpc
+https://1rpc.io/arb 1rpc

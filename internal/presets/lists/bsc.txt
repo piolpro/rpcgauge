@@ -1,0 +1,5 @@
+# Public BNB Smart Chain endpoints (no API key).
+https://bsc-dataseed.bnbchain.org bnbchain
+https://bsc-rpc.publicnode.com publicnode
+https://bsc.drpc.org drpc
+https://1rpc.io/bnb 1rpc
