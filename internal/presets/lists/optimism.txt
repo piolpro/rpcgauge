@@ -1,0 +1,5 @@
+# Public OP Mainnet endpoints (no API key).
+https://mainnet.optimism.io optimism.io
+https://optimism-rpc.publicnode.com publicnode
+https://optimism.drpc.org drpc
+https://1rpc.io/op 1rpc

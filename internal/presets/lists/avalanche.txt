@@ -1,0 +1,4 @@
+# Public Avalanche C-Chain endpoints (no API key).
+https://api.avax.network/ext/bc/C/rpc avax.network
+https://avalanche-c-chain-rpc.publicnode.com publicnode
+https://avalanche.drpc.org drpc

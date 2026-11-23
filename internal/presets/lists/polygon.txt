@@ -1,0 +1,4 @@
+# Public Polygon PoS endpoints (no API key).
+https://polygon-bor-rpc.publicnode.com publicnode
+https://polygon.drpc.org drpc
+https://1rpc.io/matic 1rpc

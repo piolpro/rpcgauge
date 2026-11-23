@@ -1,0 +1,39 @@
+name: rpcgauge
+description: Health-check and rank EVM JSON-RPC endpoints; fails the job when an endpoint is down, lagging or missing required features.
+branding:
+  icon: activity
+  color: blue
+inputs:
+  args:
+    description: Arguments passed to rpcgauge, e.g. "-f endpoints.txt --require archive,logs=10000"
+    required: true
+  format:
+    description: Output format written to the job log (table, markdown or json)
+    default: table
+outputs:
+  report:
+    description: Path to the JSON report
+    value: ${{ steps.run.outputs.report }}
+runs:
+  using: composite
+  steps:
+    - uses: actions/setup-go@v5
+      with:
+        go-version-file: ${{ github.action_path }}/go.mod
+        cache: false
+    - id: run
+      shell: bash
+      env:
+        RPCGAUGE_ARGS: ${{ inputs.args }}
+        RPCGAUGE_FORMAT: ${{ inputs.format }}
+      run: |
+        set -u
+        (cd "$GITHUB_ACTION_PATH" && go build -o "$RUNNER_TEMP/rpcgauge" .)
+        report="$RUNNER_TEMP/rpcgauge.json"
+        echo "report=$report" >> "$GITHUB_OUTPUT"
+        # shellcheck disable=SC2086
+        "$RUNNER_TEMP/rpcgauge" $RPCGAUGE_ARGS --format json --fail-on never > "$report"
+        # shellcheck disable=SC2086
+        "$RUNNER_TEMP/rpcgauge" $RPCGAUGE_ARGS --format markdown --fail-on never >> "$GITHUB_STEP_SUMMARY" || true
+        # shellcheck disable=SC2086
+        "$RUNNER_TEMP/rpcgauge" $RPCGAUGE_ARGS --format "$RPCGAUGE_FORMAT"

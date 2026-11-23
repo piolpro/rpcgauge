@@ -1,0 +1,4 @@
+# Public Gnosis Chain endpoints (no API key).
+https://rpc.gnosischain.com gnosischain
+https://gnosis-rpc.publicnode.com publicnode
+https://gnosis.drpc.org drpc

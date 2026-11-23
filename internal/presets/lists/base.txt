@@ -1,0 +1,6 @@
+# Public Base mainnet endpoints (no API key).
+https://mainnet.base.org base.org
+https://base-rpc.publicnode.com publicnode
+https://base.drpc.org drpc
+https://1rpc.io/base 1rpc
+https://base.meowrpc.com meowrpc
